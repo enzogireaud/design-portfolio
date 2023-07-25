@@ -1,0 +1,258 @@
+/* GLOBAL SETTINGS */
+@import url(https://fonts.googleapis.com/css2?family=Amiri&amp;display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #000;
+  font-family: "Amiri";
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* HEADER */
+header {
+  min-height: 210px;
+}
+#mobile-nav {
+  display: flex;
+  justify-content: space-between;
+}
+#nav-logo {
+  transform: translate(-40px, -20px);
+}
+#menu-container {
+  margin-top: 50px;
+}
+#menu {
+  transform: translateX(1500px);
+  transition: 0.5s ease-in-out;
+  background: white;
+  width: 100%;
+  z-index: 1000;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: left;
+  padding-top: 100px;
+  padding-right: 100px;
+}
+#hamburger {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 2em;
+  cursor: pointer;
+}
+#hamburger-close {
+  cursor: pointer;
+  position: absolute;
+  font-size: 2em;
+  top: 5%;
+  right: 5%;
+}
+#menu.active {
+  transform: translateX(0);
+}
+/* MAIN */
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 100px;
+}
+/* SECTION 1 */
+#presentation {
+  text-align: center;
+}
+#title-container {
+  margin: 20px;
+}
+h1 {
+  font-weight: 400;
+  font-size: 3em;
+  line-height: 55px;
+}
+/* SECTION 2 */
+#imgs-container {
+  position: relative;
+  min-height: 430px;
+  max-width: 750px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+#imgs-container img:not(:last-of-type) {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+#imgs-container img {
+  display: block;
+  height: 100%;
+  -webkit-mask-repeat: round;
+  mask-repeat: round;
+  object-fit: cover;
+  width: 100%;
+}
+img.lay {
+  -webkit-mask-image: url("/img/mask.png");
+  mask-image: url("/img/mask.png");
+}
+/* SECTION 3 */
+.information-div {
+  padding-left: 15px;
+}
+.information-div p {
+  font-size: 1.5em;
+  line-height: 35px;
+}
+h5 {
+  margin: 20px 0;
+  text-transform: uppercase;
+  color: #999;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+/* SECTION 4 */
+
+.stat-div {
+  padding-left: 15px;
+}
+.stat-div span {
+  font-size: 4.5em;
+}
+
+/* Clients */
+#clients {
+  width: 100%;
+  max-width: 80%;
+  margin: 20px auto 0 auto;
+}
+#clients ul {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.client-li {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s ease;
+}
+.client-li:hover {
+  opacity: 1;
+}
+/* Barre */
+.spacer {
+  height: 1px;
+  width: 90%;
+  margin: 30px auto;
+  background: #000;
+}
+
+/* SKILLS */
+#skills {
+  width: 100%;
+}
+h2 {
+  text-align: center;
+  font-size: 3.75em;
+  font-weight: 200;
+}
+#skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+}
+.skill-container {
+  text-align: center;
+  flex: 0 0 auto;
+  width: 50%;
+  padding: 0 10px;
+  margin: 50px auto 0 auto;
+}
+.skill {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 9.375em;
+  background: #f2f2f2;
+  margin: 10px 0;
+  padding-top: 30px;
+  cursor: pointer;
+}
+.percentage {
+  font-size: 3em;
+}
+.skill:hover > .skill-img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  animation: boing 0.4s linear forwards;
+}
+.skill-img {
+  align-items: flex-end;
+  display: flex;
+  transition: 0.1s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  height: 6.375rem;
+  justify-content: center;
+}
+.skill-img img {
+  height: 90px;
+  width: auto;
+  max-width: 90px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+h6 {
+  font-size: 1.125em;
+  margin-top: 20px;
+}
+@media screen and (min-width: 765px) {
+  .skill-container {
+    width: 33.33333333%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .skill-container {
+    width: 16.66666667%;
+  }
+}
+@keyframes boing {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

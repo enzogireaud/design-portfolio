@@ -14,10 +14,19 @@
       referrerpolicy="no-referrer"
     />
     <title>Enzo Gireaud</title>
+    <meta
+      name="description"
+      content="Version 2.0 du portfolio du développeur web Enzo Gireaud, basé sur un design dribble ce portfolio a pour objectif de mettre en avant les talents front-end et d'intégration du développeur."
+    />
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <header>
+    <div class="loader">
+      <div class="loader-content">
+        <span>Loading ...</span><span class="loader-progress">0%</span>
+      </div>
+    </div>
+    <header class="content">
       <nav>
         <div id="mobile-nav">
           <img
@@ -53,7 +62,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="content">
       <section id="presentation" class="hidden">
         <div id="title-container">
           <h1>
@@ -119,19 +128,39 @@
       <div id="clients" class="hidden">
         <ul>
           <li class="client-li">
-            <img src="/img/client/client-1.webp" alt="client-1" />
+            <img
+              src="/img/client/client-1.webp"
+              alt="client-1"
+              loading="lazy"
+            />
           </li>
           <li class="client-li">
-            <img src="/img/client/client-2.webp" alt="client-2" />
+            <img
+              src="/img/client/client-2.webp"
+              alt="client-2"
+              loading="lazy"
+            />
           </li>
           <li class="client-li">
-            <img src="/img/client/client-3.webp" alt="client-3" />
+            <img
+              src="/img/client/client-3.webp"
+              alt="client-3"
+              loading="lazy"
+            />
           </li>
           <li class="client-li">
-            <img src="/img/client/client-4.webp" alt="client-4" />
+            <img
+              src="/img/client/client-4.webp"
+              alt="client-4"
+              loading="lazy"
+            />
           </li>
           <li class="client-li">
-            <img src="/img/client/client-5.webp" alt="client-5" />
+            <img
+              src="/img/client/client-5.webp"
+              alt="client-5"
+              loading="lazy"
+            />
           </li>
         </ul>
       </div>
@@ -142,7 +171,7 @@
           <div class="skill-container">
             <div class="skill">
               <div class="skill-img">
-                <img src="/logo/React.webp" alt="React-logo" />
+                <img src="/logo/React.webp" alt="React-logo" loading="lazy" />
               </div>
               <div class="percentage">95%</div>
             </div>
@@ -151,7 +180,7 @@
           <div class="skill-container">
             <div class="skill">
               <div class="skill-img">
-                <img src="/logo/node.webp" alt="Node-logo" />
+                <img src="/logo/node.webp" alt="Node-logo" loading="lazy" />
               </div>
               <div class="percentage">95%</div>
             </div>
@@ -160,7 +189,11 @@
           <div class="skill-container">
             <div class="skill">
               <div class="skill-img">
-                <img src="/logo/typescript.webp" alt="Typescript-logo" />
+                <img
+                  src="/logo/typescript.webp"
+                  alt="Typescript-logo"
+                  loading="lazy"
+                />
               </div>
               <div class="percentage">95%</div>
             </div>
@@ -169,7 +202,7 @@
           <div class="skill-container">
             <div class="skill">
               <div class="skill-img">
-                <img src="/logo/Mongo.webp" alt="Mongo-logo" />
+                <img src="/logo/Mongo.webp" alt="Mongo-logo" loading="lazy" />
               </div>
               <div class="percentage">95%</div>
             </div>
@@ -178,7 +211,7 @@
           <div class="skill-container">
             <div class="skill">
               <div class="skill-img">
-                <img src="/logo/svelte.webp" alt="Svelte-logo" />
+                <img src="/logo/svelte.webp" alt="Svelte-logo" loading="lazy" />
               </div>
               <div class="percentage">95%</div>
             </div>
@@ -187,7 +220,7 @@
           <div class="skill-container">
             <div class="skill">
               <div class="skill-img">
-                <img src="/logo/three.webp" alt="Three-logo" />
+                <img src="/logo/three.webp" alt="Three-logo" loading="lazy" />
               </div>
               <div class="percentage">95%</div>
             </div>
@@ -236,12 +269,42 @@
         <div class="slider-container">
           <div class="slider-wrapper">
             <div class="slider">
-              <img id="slide-1" src="/img/slider/1.webp" alt="1" />
-              <img id="slide-2" src="/img/slider/2.webp" alt="2" />
-              <img id="slide-3" src="/img/slider/3.webp" alt="3" />
-              <img id="slide-4" src="/img/slider/4.webp" alt="4" />
-              <img id="slide-5" src="/img/slider/5.webp" alt="5" />
-              <img id="slide-6" src="/img/slider/6.webp" alt="6" />
+              <img
+                id="slide-1"
+                src="/img/slider/1.webp"
+                alt="1"
+                loading="lazy"
+              />
+              <img
+                id="slide-2"
+                src="/img/slider/2.webp"
+                alt="2"
+                loading="lazy"
+              />
+              <img
+                id="slide-3"
+                src="/img/slider/3.webp"
+                alt="3"
+                loading="lazy"
+              />
+              <img
+                id="slide-4"
+                src="/img/slider/4.webp"
+                alt="4"
+                loading="lazy"
+              />
+              <img
+                id="slide-5"
+                src="/img/slider/5.webp"
+                alt="5"
+                loading="lazy"
+              />
+              <img
+                id="slide-6"
+                src="/img/slider/6.webp"
+                alt="6"
+                loading="lazy"
+              />
             </div>
             <p>Swipe to scroll</p>
           </div>
@@ -276,23 +339,43 @@
           <ul>
             <li>
               <div class="bg"><i class="fa-brands fa-instagram"></i></div>
-              <img src="/img/insta/1.webp" alt="Preview Insta 1" />
+              <img
+                src="/img/insta/1.webp"
+                alt="Preview Insta 1"
+                loading="lazy"
+              />
             </li>
             <li>
               <div class="bg"><i class="fa-brands fa-instagram"></i></div>
-              <img src="/img/insta/2.webp" alt="Preview Insta 2" />
+              <img
+                src="/img/insta/2.webp"
+                alt="Preview Insta 2"
+                loading="lazy"
+              />
             </li>
             <li>
               <div class="bg"><i class="fa-brands fa-instagram"></i></div>
-              <img src="/img/insta/3.webp" alt="Preview Insta 3" />
+              <img
+                src="/img/insta/3.webp"
+                alt="Preview Insta 3"
+                loading="lazy"
+              />
             </li>
             <li>
               <div class="bg"><i class="fa-brands fa-instagram"></i></div>
-              <img src="/img/insta/4.webp" alt="Preview Insta 4" />
+              <img
+                src="/img/insta/4.webp"
+                alt="Preview Insta 4"
+                loading="lazy"
+              />
             </li>
             <li>
               <div class="bg"><i class="fa-brands fa-instagram"></i></div>
-              <img src="/img/insta/5.webp" alt="Preview Insta 5" />
+              <img
+                src="/img/insta/5.webp"
+                alt="Preview Insta 5"
+                loading="lazy"
+              />
             </li>
           </ul>
         </div>
@@ -321,7 +404,7 @@
       </section>
       <div class="spacer"></div>
     </main>
-    <footer class="hidden">
+    <footer class="hidden content">
       <div id="footer-wrapper">
         <div id="credits">
           <p>
@@ -354,6 +437,7 @@
         </div>
       </div>
     </footer>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

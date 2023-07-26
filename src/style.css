@@ -36,13 +36,17 @@ header {
   margin-top: 50px;
 }
 #menu {
-  transform: translateX(1500px);
+  visibility: hidden;
+  opacity: 0;
   transition: 0.5s ease-in-out;
-  background: white;
+  background: rgba(151, 147, 143, 0.6);
+  backdrop-filter: blur(0.5em);
+  mix-blend-mode: normal;
+  color: white;
   width: 100%;
   z-index: 1000;
   height: 100%;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   text-align: left;
@@ -50,7 +54,7 @@ header {
   padding-right: 100px;
 }
 #hamburger {
-  position: absolute;
+  position: fixed;
   top: 5%;
   right: 5%;
   font-size: 2em;
@@ -64,7 +68,8 @@ header {
   right: 5%;
 }
 #menu.active {
-  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
 }
 /* MAIN */
 #grid-container {
@@ -235,6 +240,9 @@ img.lay {
   width: 90%;
   margin: 150px auto;
   background: #000;
+}
+.spacer:last-of-type {
+  margin: 50px auto;
 }
 
 /* SKILLS */
@@ -431,4 +439,191 @@ h6 {
 .slider-nav a:hover {
   opacity: 1;
   background-color: #fa4529;
+}
+/* REFERENCE */
+#reference {
+  padding: 0px 80px;
+  text-align: center;
+}
+#reference-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#reference-wrapper p {
+  font-size: 2.25em;
+  line-height: 1.3em;
+}
+.author h6 {
+  font-size: 1.5em;
+}
+.author p {
+  color: #666;
+  font-size: 0.825em !important;
+}
+@media screen and (max-width: 990px) {
+  #reference {
+    padding: 0 10px;
+  }
+  #reference-wrapper p {
+    font-size: 1.85em;
+  }
+}
+/* INSTA */
+#instagram-container {
+  max-width: 1000px;
+  margin: 100px auto;
+}
+@media screen and (max-width: 990px) {
+  #instagram-container h2 {
+    font-size: 2em;
+  }
+}
+#instagram-container h2 a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s ease;
+  opacity: 0.7;
+}
+#instagram-container h2 a:hover {
+  opacity: 1;
+}
+#posts-container {
+  margin-top: 50px;
+  padding: 0 15px;
+}
+#posts-container ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+#posts-container ul li {
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  min-height: 100px;
+}
+
+#posts-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid black;
+  object-fit: cover;
+}
+li .bg {
+  background-color: #544a4a78;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+#posts-container ul li:hover > .bg {
+  opacity: 1;
+  visibility: visible;
+  font-size: 3em;
+}
+
+/* CALL ME */
+#callme {
+  padding: 300px 0 200px 0;
+  background: url("/img/pic3.png");
+  background-position: calc(50% + 30px) calc(50% + 30px);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 575px) {
+  #callme {
+    background: none;
+    padding: 100px 0 0 0;
+  }
+}
+#call-me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#call-me-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  text-align: left;
+}
+#call-me-wrapper p {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  color: #666;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#call-me-wrapper a {
+  line-height: 100px;
+  text-decoration: none;
+  font-size: 5.565em;
+  cursor: pointer !important;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    #fa4529,
+    #fa4529 50%,
+    currentColor 0
+  );
+  background-image: linear-gradient(
+    to right,
+    #fa4529,
+    #fa4529 50%,
+    currentColor 50%
+  );
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  color: inherit;
+  display: inline-flex;
+  transition: background-position calc(300ms * 2) ease-in-out;
+}
+
+#call-me-wrapper a:hover {
+  background-position: 0 0;
+}
+#contact-arrow {
+  font-size: 3em;
+}
+/* FOOTER */
+footer {
+  margin: 60px 0;
+}
+#footer-wrapper {
+  text-align: center;
+}
+#mail a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s ease-in-out;
+}
+#mail a:hover {
+  color: #fa4529;
+}
+#socials {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 80%;
+  margin: 20px auto;
+  font-size: 1.5em;
+}
+#socials a {
+  color: #000;
+  transition: 0.3s ease-in-out;
+}
+#socials a:hover {
+  color: #fa4529;
 }

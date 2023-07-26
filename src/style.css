@@ -73,6 +73,7 @@ header {
   right: 5%;
   font-size: 2em;
   cursor: pointer;
+  z-index: 1000;
 }
 #hamburger-close {
   cursor: pointer;
@@ -80,6 +81,7 @@ header {
   font-size: 2em;
   top: 5%;
   right: 5%;
+  z-index: 1000;
 }
 #menu.active {
   visibility: visible;
@@ -161,6 +163,7 @@ header {
   left: 0;
   width: 0; /* Ajout de cette ligne pour définir la largeur initiale de la barre à 0 */
   transition: width 0.6s ease;
+  transition-delay: 0.3s;
   height: 2px; /* Ajustez la hauteur de la barre */
   background-color: #fa4529; /* Couleur de la barre */
 }
@@ -224,8 +227,8 @@ h1 {
   width: 100%;
 }
 img.lay {
-  -webkit-mask-image: url("/img/mask.png");
-  mask-image: url("/img/mask.png");
+  -webkit-mask-image: url("/img/mask.webp");
+  mask-image: url("/img/mask.webp");
 }
 /* SECTION 3 */
 #informations {
@@ -596,9 +599,10 @@ li .bg {
 /* CALL ME */
 #callme {
   padding: 300px 0 200px 0;
-  background: url("/img/pic3.png");
+  background: url("/img/pic3.webp");
   background-position: calc(50% + 30px) calc(50% + 30px);
   background-repeat: no-repeat;
+  user-select: none;
 }
 @media screen and (max-width: 575px) {
   #callme {

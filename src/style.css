@@ -16,6 +16,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
+html {
+  scroll-behavior: smooth;
+}
 img {
   height: auto;
   max-width: 100%;
@@ -39,7 +42,7 @@ header {
   visibility: hidden;
   opacity: 0;
   transition: 0.5s ease-in-out;
-  background: rgba(151, 147, 143, 0.6);
+  background: rgba(70, 66, 63, 0.6);
   backdrop-filter: blur(0.5em);
   mix-blend-mode: normal;
   color: white;
@@ -49,9 +52,9 @@ header {
   position: fixed;
   left: 0;
   top: 0;
-  text-align: left;
-  padding-top: 100px;
-  padding-right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #hamburger {
   position: fixed;
@@ -99,6 +102,65 @@ header {
     gap: 0;
   }
 }
+.links-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+.menu-links {
+  text-decoration: none;
+  color: #fff;
+  font-size: 5em;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 100px;
+  text-decoration: none;
+  cursor: pointer !important;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    #fa4529,
+    #fa4529 50%,
+    currentColor 0
+  );
+  background-image: linear-gradient(
+    to right,
+    #fa4529,
+    #fa4529 50%,
+    currentColor 50%
+  );
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  color: inherit;
+  display: inline-flex;
+  transition: background-position calc(300ms * 2) ease-in-out;
+  position: relative; /* Ajout de cette ligne pour positionner l'élément ::after correctement */
+}
+.menu-links::after {
+  content: ""; /* Ajout de cette ligne pour insérer du contenu dans l'élément ::after */
+  position: absolute;
+  bottom: -5px; /* Ajustez la valeur selon la position souhaitée de la barre par rapport au texte */
+  left: 0;
+  width: 0; /* Ajout de cette ligne pour définir la largeur initiale de la barre à 0 */
+  transition: width 0.6s ease;
+  height: 2px; /* Ajustez la hauteur de la barre */
+  background-color: #fa4529; /* Couleur de la barre */
+}
+.menu-links:hover::after {
+  width: 100%; /* Ajout de cette ligne pour définir la largeur de la barre à 100% lorsqu'elle est survolée */
+}
+
+.menu-links:hover {
+  background-position: 0 0;
+}
+
 /* SECTION 1 */
 #presentation {
   text-align: center;
@@ -418,27 +480,13 @@ h6 {
   scroll-snap-align: start;
   object-fit: cover;
 }
-.slider-nav {
-  display: flex;
-  column-gap: 1em;
-  position: absolute;
-  bottom: 1.25em;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000000;
-}
-.slider-nav a {
-  width: 0.7em;
-  height: 0.7em;
-  border-radius: 50%;
-  background: white;
-  opacity: 0.7;
-  transition: 0.3s ease;
-}
-
-.slider-nav a:hover {
-  opacity: 1;
-  background-color: #fa4529;
+.slider-wrapper p {
+  margin: 20px;
+  text-align: center;
+  font-size: 2em;
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.2666666667));
+  line-height: 30px;
 }
 /* REFERENCE */
 #reference {

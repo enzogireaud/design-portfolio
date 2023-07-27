@@ -266,48 +266,49 @@
       <div class="spacer"></div>
       <section id="projects" class="hidden">
         <h2>My Latest Projects</h2>
-        <div class="slider-container">
-          <div class="slider-wrapper">
-            <div class="slider">
-              <img
-                id="slide-1"
-                src="/img/slider/1.webp"
-                alt="1"
-                loading="lazy"
-              />
-              <img
-                id="slide-2"
-                src="/img/slider/2.webp"
-                alt="2"
-                loading="lazy"
-              />
-              <img
-                id="slide-3"
-                src="/img/slider/3.webp"
-                alt="3"
-                loading="lazy"
-              />
-              <img
-                id="slide-4"
-                src="/img/slider/4.webp"
-                alt="4"
-                loading="lazy"
-              />
-              <img
-                id="slide-5"
-                src="/img/slider/5.webp"
-                alt="5"
-                loading="lazy"
-              />
-              <img
-                id="slide-6"
-                src="/img/slider/6.webp"
-                alt="6"
-                loading="lazy"
-              />
-            </div>
-            <p>Swipe to scroll</p>
-          </div>
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+          <img
+            class="image"
+            src="/img/slider/1.webp"
+            alt="Slider image 1"
+            loading="lazy"
+            draggable="false"
+          />
+          <img
+            class="image"
+            src="/img/slider/2.webp"
+            alt="Slider image 2"
+            loading="lazy"
+            draggable="false"
+          />
+          <img
+            class="image"
+            src="/img/slider/3.webp"
+            alt="Slider image 3"
+            loading="lazy"
+            draggable="false"
+          />
+          <img
+            class="image"
+            src="/img/slider/4.webp"
+            alt="Slider image 4"
+            loading="lazy"
+            draggable="false"
+          />
+          <img
+            class="image"
+            src="/img/slider/5.webp"
+            alt="Slider image 5"
+            loading="lazy"
+            draggable="false"
+          />
+          <img
+            class="image"
+            src="/img/slider/6.webp"
+            alt="Slider image 6"
+            draggable="false"
+            loading="lazy"
+          />
         </div>
       </section>
       <div class="spacer"></div>
@@ -437,7 +438,7 @@
         </div>
       </div>
     </footer>
-
     <script type="module" src="/src/main.ts"></script>
+    <script src="./src/slider.js"></script>
   </body>
 </html>

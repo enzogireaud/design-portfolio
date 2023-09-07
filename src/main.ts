@@ -151,15 +151,50 @@ gsap.to("#title-container h1",{
   duration:1,
   opacity:1,
   transform:"translateY(0)",
+  ease:ease,
   delay:9
 })
 gsap.to("#mobile-nav",{
   duration:2,
   opacity:1,
+  ease:ease,
   delay:9
 })
 gsap.to("#imgs-container",{
   duration:1,
   transform:"translateY(0)",
   delay: 8
+})
+gsap.fromTo("#informations", {
+  duration:1,
+  transform:"translateX(-100%)",
+  opacity:0,
+  delay:7
+},{
+duration:0.6,
+opacity:1,
+transform:"translateX(0px)",
+delay:9.5
+})
+gsap.fromTo("#informations", {
+  duration:1,
+  transform:"translateX(-100%)",
+  opacity:0,
+  delay:0
+},{
+duration:0.6,
+opacity:1,
+transform:"translateX(0px)",
+delay:9.5
+})
+gsap.fromTo("#stats", {
+  duration:1,
+  transform:"translateX(100%)",
+  opacity:0,
+  delay:0
+},{
+duration:0.6,
+opacity:1,
+transform:"translateX(0px)",
+delay:10
 })

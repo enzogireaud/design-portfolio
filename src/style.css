@@ -133,7 +133,6 @@ img {
   transition: all 1s;
 }
 .show {
-  transform: translateY(0);
   filter: blur(0);
   opacity: 1;
 }

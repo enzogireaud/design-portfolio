@@ -66,372 +66,384 @@
   </head>
   <body>
     <div class="loader">
-      <div class="loader-content">
-        <span>Loading ...</span><span class="loader-progress">0%</span>
+      <h2 class="counter">0</h2>
+      <div class="site-teaser">
+        <span
+          >Credits goes to "Logan Cee" for his amazing dribble template.
+        </span>
+      </div>
+      <div class="circles">
+        <div class="circle circle-outer"></div>
+        <div class="circle circle-inner"></div>
+        <div class="circle-inner-rotator"></div>
+        <div class="block"></div>
       </div>
     </div>
-    <header class="content">
-      <nav>
-        <div id="mobile-nav">
-          <img
-            src="/logo/1.webp"
-            id="nav-logo"
-            alt="logo"
-            width="200px"
-            height="200px"
-            class="hidden"
-          />
-          <div id="menu-container">
-            <span id="hamburger"><i class="fa-solid fa-bars"></i></span>
-            <ul id="menu">
-              <span id="hamburger-close"
-                ><i class="fa-solid fa-xmark"></i
-              ></span>
-              <div class="links-container">
-                <a href="#" class="menu-links">
-                  <li>Home</li>
-                </a>
-                <a href="#informations" class="menu-links">
-                  <li>About</li>
-                </a>
-                <a href="#skills" class="menu-links">
-                  <li>Skills</li>
-                </a>
-                <a href="#callme" class="menu-links">
-                  <li>Contact</li>
-                </a>
-              </div>
-            </ul>
+    <div class="container">
+      <header id="header">
+        <nav>
+          <div id="mobile-nav">
+            <img
+              src="/logo/1.webp"
+              id="nav-logo"
+              alt="logo"
+              width="200px"
+              height="200px"
+              class="hidden"
+            />
+            <div id="menu-container">
+              <span id="hamburger"><i class="fa-solid fa-bars"></i></span>
+              <ul id="menu">
+                <span id="hamburger-close"
+                  ><i class="fa-solid fa-xmark"></i
+                ></span>
+                <div class="links-container">
+                  <a href="#header" class="menu-links">
+                    <li>Home</li>
+                  </a>
+                  <a href="#informations" class="menu-links">
+                    <li>About</li>
+                  </a>
+                  <a href="#skills" class="menu-links">
+                    <li>Skills</li>
+                  </a>
+                  <a href="#callme" class="menu-links">
+                    <li>Contact</li>
+                  </a>
+                </div>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
-    </header>
-    <main class="content">
-      <section id="presentation" class="hidden">
-        <div id="title-container">
-          <h1>
-            Enzo Gireaud<br />
-            Creative Developper<br />Based in Nantes
-          </h1>
-        </div>
-      </section>
-      <div id="grid-container">
-        <section id="profile-picture" class="hidden">
-          <div id="imgs-container">
-            <img src="/img/pic1.webp" alt="pic1" loading="lazy" />
-            <img src="/img/pp.webp" alt="profile" class="lay" />
-            <img src="/img/pic2.webp" alt="pic2" loading="lazy" />
+        </nav>
+      </header>
+      <main class="content">
+        <section id="presentation" class="hidden">
+          <div id="title-container">
+            <h1>
+              Enzo Gireaud<br />
+              Creative Developper<br />Based in Nantes
+            </h1>
           </div>
         </section>
-        <section id="informations" class="hidden">
-          <div class="information-div">
-            <h5>Biography</h5>
-            <p>
-              Work for money and <br />
-              Code for love! I'm Enzo,<br />
-              a Web Creative<br />
-              Developper Based in Nantes
-            </p>
-          </div>
-          <div class="information-div">
-            <h5>Contact</h5>
-            <p>
-              Nantes, France<br />
-              enzogireauds@gmail.com<br />
-              +33 7 82 19 47 32
-            </p>
-          </div>
-          <div class="information-div">
-            <h5>Services</h5>
-            <p>
-              Design Integration<br />
-              Web Application<br />
-              Custom Website
-            </p>
-          </div>
-        </section>
-        <section id="stats" class="hidden">
-          <div class="stat-div">
-            <h5>Years of experience</h5>
-            <span>3</span>
-          </div>
-          <div class="stat-div">
-            <h5>Satisfaction Clients</h5>
-            <span>100%</span>
-          </div>
-          <div class="stat-div">
-            <h5>Clients on Worldwide</h5>
-            <span>50+</span>
-          </div>
-          <div class="stat-div">
-            <h5>Projects done</h5>
-            <span>250+</span>
-          </div>
-        </section>
-      </div>
-      <div id="clients" class="hidden">
-        <ul>
-          <li class="client-li">
-            <img
-              src="/img/client/client-1.webp"
-              alt="client-1"
-              loading="lazy"
-            />
-          </li>
-          <li class="client-li">
-            <img
-              src="/img/client/client-2.webp"
-              alt="client-2"
-              loading="lazy"
-            />
-          </li>
-          <li class="client-li">
-            <img
-              src="/img/client/client-3.webp"
-              alt="client-3"
-              loading="lazy"
-            />
-          </li>
-          <li class="client-li">
-            <img
-              src="/img/client/client-4.webp"
-              alt="client-4"
-              loading="lazy"
-            />
-          </li>
-          <li class="client-li">
-            <img
-              src="/img/client/client-5.webp"
-              alt="client-5"
-              loading="lazy"
-            />
-          </li>
-        </ul>
-      </div>
-      <div class="spacer"></div>
-      <section id="skills" class="hidden">
-        <h2>My Advantage</h2>
-        <div id="skills-container">
-          <div class="skill-container">
-            <div class="skill">
-              <div class="skill-img">
-                <img src="/logo/React.webp" alt="React-logo" loading="lazy" />
-              </div>
-              <div class="percentage">95%</div>
+        <div id="grid-container">
+          <section id="profile-picture" class="hidden">
+            <div id="imgs-container">
+              <img src="/img/pic1.webp" alt="pic1" loading="lazy" />
+              <img src="/img/pp.webp" alt="profile" class="lay" />
+              <img src="/img/pic2.webp" alt="pic2" loading="lazy" />
             </div>
-            <h6>React</h6>
-          </div>
-          <div class="skill-container">
-            <div class="skill">
-              <div class="skill-img">
-                <img src="/logo/node.webp" alt="Node-logo" loading="lazy" />
-              </div>
-              <div class="percentage">75%</div>
+          </section>
+          <section id="informations" class="hidden">
+            <div class="information-div">
+              <h5>Biography</h5>
+              <p>
+                Work for money and <br />
+                Code for love! I'm Enzo,<br />
+                a Web Creative<br />
+                Developper Based in Nantes
+              </p>
             </div>
-            <h6>Node</h6>
-          </div>
-          <div class="skill-container">
-            <div class="skill">
-              <div class="skill-img">
-                <img
-                  src="/logo/typescript.webp"
-                  alt="Typescript-logo"
-                  loading="lazy"
-                />
-              </div>
-              <div class="percentage">80%</div>
+            <div class="information-div">
+              <h5>Contact</h5>
+              <p>
+                Nantes, France<br />
+                enzogireauds@gmail.com<br />
+                +33 7 82 19 47 32
+              </p>
             </div>
-            <h6>Typescript</h6>
-          </div>
-          <div class="skill-container">
-            <div class="skill">
-              <div class="skill-img">
-                <img src="/logo/Mongo.webp" alt="Mongo-logo" loading="lazy" />
-              </div>
-              <div class="percentage">95%</div>
+            <div class="information-div">
+              <h5>Services</h5>
+              <p>
+                Design Integration<br />
+                Web Application<br />
+                Custom Website
+              </p>
             </div>
-            <h6>MongoDB</h6>
-          </div>
-          <div class="skill-container">
-            <div class="skill">
-              <div class="skill-img">
-                <img src="/logo/svelte.webp" alt="Svelte-logo" loading="lazy" />
-              </div>
-              <div class="percentage">85%</div>
+          </section>
+          <section id="stats" class="hidden">
+            <div class="stat-div">
+              <h5>Years of experience</h5>
+              <span>3</span>
             </div>
-            <h6>Svelte</h6>
-          </div>
-          <div class="skill-container">
-            <div class="skill">
-              <div class="skill-img">
-                <img src="/logo/three.webp" alt="Three-logo" loading="lazy" />
-              </div>
-              <div class="percentage">♾️%</div>
+            <div class="stat-div">
+              <h5>Satisfaction Clients</h5>
+              <span>100%</span>
             </div>
-            <h6>Threejs</h6>
-          </div>
+            <div class="stat-div">
+              <h5>Clients on Worldwide</h5>
+              <span>50+</span>
+            </div>
+            <div class="stat-div">
+              <h5>Projects done</h5>
+              <span>250+</span>
+            </div>
+          </section>
         </div>
-      </section>
-      <div class="spacer"></div>
-      <section id="education" class="hidden">
-        <h2>Education & Experience</h2>
-        <div id="education-container">
-          <div>
-            <span class="education-year">2019-2022</span>
-            <ul>
-              <h4>Sports Management Licence</h4>
-              <p>University of Poitiers</p>
-            </ul>
-            <ul>
-              <h4>Started my reconversion</h4>
-              <p>Mastering Front End (@from-scratch)</p>
-            </ul>
-          </div>
-          <div>
-            <span class="education-year">2022-2023</span>
-            <ul>
-              <h4>"Developper integrator web"</h4>
-              <p>OpenClassrooms</p>
-            </ul>
-            <ul>
-              <h4>Web Developper / Web Designer</h4>
-              <p>Amaranthe</p>
-            </ul>
-          </div>
-          <div>
-            <span class="education-year">2023</span>
-            <ul>
-              <h4>Web Developper / Web Designer</h4>
-              <p>Sylvain Bulot</p>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <div class="spacer"></div>
-      <section id="reference" class="hidden">
-        <div id="reference-wrapper">
-          <p>
-            "I have followed Enzo throughout his skills development journey. He
-            is a person with tremendous human and technical potential, and I
-            would not hesitate to work with him again. He is very up-to-date
-            with his technological knowledge, hardworking, and eager to learn.
-            On a personal level, he is patient, understanding, and open-minded.
-            I highly recommend him."
-          </p>
-          <div class="author">
-            <h6>Philippe Fabrice Guemkam Simo</h6>
-            <p>Mentor at @OpenClassrooms</p>
-          </div>
-        </div>
-      </section>
-      <div id="instagram-container" class="hidden">
-        <h2>
-          <a
-            href="https://www.instagram.com/enzo_developpeur_web/"
-            target="_blank"
-            >@Enzo_developpeur_web</a
-          >
-        </h2>
-        <div id="posts-container">
+        <div id="clients" class="hidden">
           <ul>
-            <li>
-              <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+            <li class="client-li">
               <img
-                src="/img/insta/1.webp"
-                alt="Preview Insta 1"
+                src="/img/client/client-1.webp"
+                alt="client-1"
                 loading="lazy"
               />
             </li>
-            <li>
-              <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+            <li class="client-li">
               <img
-                src="/img/insta/2.webp"
-                alt="Preview Insta 2"
+                src="/img/client/client-2.webp"
+                alt="client-2"
                 loading="lazy"
               />
             </li>
-            <li>
-              <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+            <li class="client-li">
               <img
-                src="/img/insta/3.webp"
-                alt="Preview Insta 3"
+                src="/img/client/client-3.webp"
+                alt="client-3"
                 loading="lazy"
               />
             </li>
-            <li>
-              <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+            <li class="client-li">
               <img
-                src="/img/insta/4.webp"
-                alt="Preview Insta 4"
+                src="/img/client/client-4.webp"
+                alt="client-4"
                 loading="lazy"
               />
             </li>
-            <li>
-              <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+            <li class="client-li">
               <img
-                src="/img/insta/5.webp"
-                alt="Preview Insta 5"
+                src="/img/client/client-5.webp"
+                alt="client-5"
                 loading="lazy"
               />
             </li>
           </ul>
         </div>
-      </div>
-      <section id="callme" class="hidden">
-        <div id="call-me-container">
-          <div id="call-me-wrapper" class="hidden">
-            <p>Describe your<br />project</p>
-            <a href="tel:+33782194732" target="_blank"> Call<br />Enzo </a>
-            <div id="contact-arrow">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 17 17"
-                style="height: 1em"
-              >
-                <path
-                  d="M16 .997V10h-1V2.703L4.683 13l-.707-.708L14.291 1.997H6.975v-1H16z"
-                ></path>
-              </svg>
+        <div class="spacer"></div>
+        <section id="skills" class="hidden">
+          <h2>My Advantage</h2>
+          <div id="skills-container">
+            <div class="skill-container">
+              <div class="skill">
+                <div class="skill-img">
+                  <img src="/logo/React.webp" alt="React-logo" loading="lazy" />
+                </div>
+                <div class="percentage">95%</div>
+              </div>
+              <h6>React</h6>
+            </div>
+            <div class="skill-container">
+              <div class="skill">
+                <div class="skill-img">
+                  <img src="/logo/node.webp" alt="Node-logo" loading="lazy" />
+                </div>
+                <div class="percentage">75%</div>
+              </div>
+              <h6>Node</h6>
+            </div>
+            <div class="skill-container">
+              <div class="skill">
+                <div class="skill-img">
+                  <img
+                    src="/logo/typescript.webp"
+                    alt="Typescript-logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="percentage">80%</div>
+              </div>
+              <h6>Typescript</h6>
+            </div>
+            <div class="skill-container">
+              <div class="skill">
+                <div class="skill-img">
+                  <img src="/logo/Mongo.webp" alt="Mongo-logo" loading="lazy" />
+                </div>
+                <div class="percentage">95%</div>
+              </div>
+              <h6>MongoDB</h6>
+            </div>
+            <div class="skill-container">
+              <div class="skill">
+                <div class="skill-img">
+                  <img
+                    src="/logo/svelte.webp"
+                    alt="Svelte-logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="percentage">85%</div>
+              </div>
+              <h6>Svelte</h6>
+            </div>
+            <div class="skill-container">
+              <div class="skill">
+                <div class="skill-img">
+                  <img src="/logo/three.webp" alt="Three-logo" loading="lazy" />
+                </div>
+                <div class="percentage">♾️%</div>
+              </div>
+              <h6>Threejs</h6>
             </div>
           </div>
+        </section>
+        <div class="spacer"></div>
+        <section id="education" class="hidden">
+          <h2>Education & Experience</h2>
+          <div id="education-container">
+            <div>
+              <span class="education-year">2019-2022</span>
+              <ul>
+                <h4>Sports Management Licence</h4>
+                <p>University of Poitiers</p>
+              </ul>
+              <ul>
+                <h4>Started my reconversion</h4>
+                <p>Mastering Front End (@from-scratch)</p>
+              </ul>
+            </div>
+            <div>
+              <span class="education-year">2022-2023</span>
+              <ul>
+                <h4>"Developper integrator web"</h4>
+                <p>OpenClassrooms</p>
+              </ul>
+              <ul>
+                <h4>Web Developper / Web Designer</h4>
+                <p>Amaranthe</p>
+              </ul>
+            </div>
+            <div>
+              <span class="education-year">2023</span>
+              <ul>
+                <h4>Web Developper / Web Designer</h4>
+                <p>Sylvain Bulot</p>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="spacer"></div>
+        <section id="reference" class="hidden">
+          <div id="reference-wrapper">
+            <p>
+              "I have followed Enzo throughout his skills development journey.
+              He is a person with tremendous human and technical potential, and
+              I would not hesitate to work with him again. He is very up-to-date
+              with his technological knowledge, hardworking, and eager to learn.
+              On a personal level, he is patient, understanding, and
+              open-minded. I highly recommend him."
+            </p>
+            <div class="author">
+              <h6>Philippe Fabrice Guemkam Simo</h6>
+              <p>Mentor at @OpenClassrooms</p>
+            </div>
+          </div>
+        </section>
+        <div id="instagram-container" class="hidden">
+          <h2>
+            <a
+              href="https://www.instagram.com/enzo_developpeur_web/"
+              target="_blank"
+              >@Enzo_developpeur_web</a
+            >
+          </h2>
+          <div id="posts-container">
+            <ul>
+              <li>
+                <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+                <img
+                  src="/img/insta/1.webp"
+                  alt="Preview Insta 1"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+                <img
+                  src="/img/insta/2.webp"
+                  alt="Preview Insta 2"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+                <img
+                  src="/img/insta/3.webp"
+                  alt="Preview Insta 3"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+                <img
+                  src="/img/insta/4.webp"
+                  alt="Preview Insta 4"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <div class="bg"><i class="fa-brands fa-instagram"></i></div>
+                <img
+                  src="/img/insta/5.webp"
+                  alt="Preview Insta 5"
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
         </div>
-      </section>
-      <div class="spacer"></div>
-    </main>
-    <footer class="hidden content">
-      <div id="footer-wrapper">
-        <div id="credits">
-          <p>
-            © 2023 All credits goes to "Logan Cee" for his amazing dribble
-            template.
-          </p>
+        <section id="callme" class="hidden">
+          <div id="call-me-container">
+            <div id="call-me-wrapper" class="hidden">
+              <p>Describe your<br />project</p>
+              <a href="tel:+33782194732" target="_blank"> Call<br />Enzo </a>
+              <div id="contact-arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 17 17"
+                  style="height: 1em"
+                >
+                  <path
+                    d="M16 .997V10h-1V2.703L4.683 13l-.707-.708L14.291 1.997H6.975v-1H16z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="spacer"></div>
+      </main>
+      <footer class="hidden content">
+        <div id="footer-wrapper">
+          <div id="credits">
+            <p>© 2023 Enzo Gireaud.</p>
+          </div>
+          <div id="mail">
+            <a href="mailto:enzogireauds@gmail.com" target="_blank"
+              >enzogireauds@gmail.com</a
+            >
+          </div>
+          <div id="socials">
+            <a href="https://twitter.com/ChadDevelopper" target="_blank"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/enzo_developpeur_web/"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/enzo-gireaud-645693240/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/furasshujipushii" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
         </div>
-        <div id="mail">
-          <a href="mailto:enzogireauds@gmail.com" target="_blank"
-            >enzogireauds@gmail.com</a
-          >
-        </div>
-        <div id="socials">
-          <a href="https://twitter.com/ChadDevelopper" target="_blank"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/enzo_developpeur_web/"
-            target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/enzo-gireaud-645693240/"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/furasshujipushii" target="_blank"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

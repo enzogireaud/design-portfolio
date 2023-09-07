@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+
 /*****
  *
  * Menu + Fade animation
@@ -33,55 +35,131 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-/*****
- *
- * Loader
- *
- ****/
-document.addEventListener("DOMContentLoaded", () => {
-  // La page HTML est chargée, commencez le chargement des autres ressources ici
-  let progress = 0;
-  const loaderProgress = document.querySelector(
-    ".loader-progress"
-  ) as HTMLSpanElement;
-  const contents = document.querySelectorAll(
-    ".content"
-  ) as NodeListOf<HTMLDivElement>;
+/******** Loader *******/
 
-  function updateLoader() {
-    // Mettez à jour le chiffre pour afficher le pourcentage de chargement
-    loaderProgress.textContent = `${progress}%`;
-  }
+function startLoader() {
+  let counterElement = document.querySelector(".counter")
+  let currentValue = 0
 
-  function showContents() {
-    // Affiche tous les éléments avec la classe ".content"
-    contents.forEach((content) => {
-      content.style.display = "block";
-    });
-  }
-
-  function incrementLoader() {
-    // Incrémentez la valeur de "progress" jusqu'à atteindre 100
-    if (progress < 100) {
-      progress += 1; // Augmentez la valeur pour contrôler la vitesse du loader
-      updateLoader();
-      setTimeout(incrementLoader, 20); // Délai avant d'augmenter la valeur suivante (plus petit pour une meilleure animation)
-    } else {
-      // Une fois le chargement terminé, affichez tous les éléments avec la classe ".content"
-      showContents();
-
-      // Masquez le loader
-      const loader = document.querySelector(".loader") as HTMLDivElement;
-      if (loader) {
-        loader.style.display = "none";
-      }
+  function updateCounter() {
+    if(currentValue === 100) {
+      return;
     }
+    currentValue += Math.floor(Math.random() * 10) + 1
+
+    if(currentValue >100) {
+      currentValue = 100
+    }
+
+    if(counterElement) {
+      counterElement.textContent = currentValue +  "%"
+    }
+
+    let delay = Math.floor(Math.random() * 200) + 250;
+    setTimeout(updateCounter,delay) 
   }
+  updateCounter()
+}
+startLoader()
+let ease = "power4.inOut"
+gsap.from(".circles", {
+  duration:2,
+  top:"-100%",
+  ease:"elastic.out",
+  delay:0.5
+})
+gsap.to(".circle-inner",{
+  duration:1,
+  width:"75px",
+  height:"75px",
+  ease:ease,
+  delay:2
+})
+gsap.to(".circle-inner-rotator",{
+  duration:1,
+  scale:1,
+  ease:ease,
+  delay:2.5
+})
+gsap.to(".circles",{
+  duration:1.5,
+  rotation:360,
+  ease:ease,
+  delay:3
+})
+if(window.innerWidth > 1050) {
+  gsap.to(".block",{
+    duration:0.75,
+    height:"200px",
+    display:"block",
+    ease:ease,
+    delay:4
+  })
+}
 
-  incrementLoader();
-});
-
-
-
-
-
+gsap.to(".block",{
+  duration:0.75,
+  width:"800px",
+  ease:ease,
+  delay:4.5
+})
+gsap.fromTo(".container",{
+  duration:2,
+  left:"100%",
+  scale:0.5,
+  ease:ease,
+  delay:4
+},{
+  duration:2,
+  left:"50%",
+  scale:0.5,
+  ease:ease,
+  transform:"translateX(-50%)",
+  delay:4
+})
+gsap.to(".block",{
+  duration:1.5,
+  width:"0px",
+  ease:ease,
+  delay:5
+})
+gsap.to(".block",{
+  duration:1.5,
+  height:"0px",
+  ease:ease,
+  delay:6
+})
+gsap.to(".circles",{
+  duration:1.5,
+  rotation:0,
+  ease:ease,
+  delay:6.5
+})
+gsap.to(".loader",{
+  duration:2.5,
+  scale:0,
+  ease:ease,
+  delay:7
+})
+gsap.to(".container",{
+  duration:2.5,
+  scale:1,
+  ease:ease,
+  delay:7.5
+})
+gsap.to("#title-container h1",{
+  duration:1,
+  opacity:1,
+  transform:"translateY(0)",
+  delay:9
+})
+gsap.to("#mobile-nav",{
+  duration:2,
+  opacity:1,
+  delay:9
+})
+gsap.to("#imgs-container",{
+  duration:1,
+  transform:"translateY(0)",
+  delay: 8
+})
